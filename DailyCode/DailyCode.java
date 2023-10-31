@@ -1,16 +1,17 @@
-import java.lang.Math;
+import java.lang.*;
+import java.util.*;
 
 class Node{
-    int val;
+    String val;
     Node left, right;
 
-    public Node(int val, Node left, Node right) {
-        this.val = val;
+    public Node(String val, Node left, Node right) {
+        this.val = "";
         this.left = left;
         this.right = right;
     }
 
-    public Node(int val) {
+    public Node(String val) {
         this.val = val;
         this.left = null;
         this.right = null;
@@ -19,8 +20,20 @@ class Node{
 
 public class DailyCode {
   
+  static boolean isNumeric(String str) { 
+    try {  
+      Double.parseDouble(str);  
+      return true;
+    } catch(NumberFormatException e){  
+      return false;  
+    }  
+  }
+
   static int evaluate(Node root){
     int res=0;
+    if (isNumeric(root.val)==true) {
+      res=Integer.parseInt(root.val);
+    }
     return res;
   }
 
