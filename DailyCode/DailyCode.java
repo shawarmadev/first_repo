@@ -1,15 +1,15 @@
 
-class Node{
+class Tree{
     String val;
-    Node left, right;
+    Tree left, right;
 
-    public Node(String val, Node left, Node right) {
+    public Tree(String val, Tree left, Tree right) {
         this.val = "";
         this.left = left;
         this.right = right;
     }
 
-    public Node(String val) {
+    public Tree(String val) {
         this.val = val;
         this.left = null;
         this.right = null;
@@ -27,7 +27,7 @@ public class DailyCode {
     }  
   }
 
-  static int evaluate(Node root){
+  static int evaluate(Tree root){
     int res=0;
     if (isNumeric(root.val)==true) {
       res=Integer.parseInt(root.val);
@@ -44,7 +44,7 @@ public class DailyCode {
     return res;
   }
   public static void main (String [] args) { 
-    Node training = new Node("asdf");
+    Tree training = new Tree("asdf");
     System.out.println(evaluate(training));
     int test=calcAngle(0, 14, 40);
     System.out.println(test);      
