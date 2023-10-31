@@ -1,5 +1,3 @@
-import java.lang.*;
-import java.util.*;
 
 class Node{
     String val;
@@ -46,6 +44,8 @@ public class DailyCode {
     return res;
   }
   public static void main (String [] args) { 
+    Node training = new Node("asdf");
+    System.out.println(evaluate(training));
     int test=calcAngle(0, 14, 40);
     System.out.println(test);      
 } 
