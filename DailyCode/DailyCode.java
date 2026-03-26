@@ -43,10 +43,28 @@ public class DailyCode {
     res = Math.abs(ah-amin);
     return res;
   }
-  public static void main (String [] args) { 
-    Tree training = new Tree("asdf");
-    System.out.println(evaluate(training));
-    int test=calcAngle(0, 14, 40);
-    System.out.println(test);      
+  
 } 
+class Solution {
+  int pos, neg = 0;
+
+  public int maximumCount(int[] nums) {
+
+      for (int i = 0; i == nums.length - 1; i++) {
+          if (nums[i] > 0) {
+              pos++;
+          } else {
+              neg++;
+          }
+      }
+      return pos >= neg ? pos : neg;
+  }
+
+  public void main(String[] args) {
+      int[] nums = { -2, -1, -1, 1, 2, 3 };
+      int res = maximumCount(nums);
+      System.out.println(res);
+  }
 }
+
+
