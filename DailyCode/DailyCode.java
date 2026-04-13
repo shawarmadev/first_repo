@@ -60,11 +60,13 @@ class Solution {
       return pos >= neg ? pos : neg;
   }
 
+
   public void main(String[] args) {
       int[] nums = { -2, -1, -1, 1, 2, 3 };
       int res = maximumCount(nums);
       System.out.println(res);
+    }
+  
   }
-}
 
 
