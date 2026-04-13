@@ -16,7 +16,9 @@ public class Test {
         System.out.println("You passed!");
       else
         System.out.println("You didn't pass.");
-      scan.close();
+
+      
+    scan.close();
     
   }
 }
